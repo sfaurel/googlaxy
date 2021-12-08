@@ -1,0 +1,19 @@
+
+
+<p>Googlaxy</p>
+<form  method="POST">
+    {% csrf_token %}
+    {{ form.question }}
+    <button type="submit">Search</button>
+</form>
+{% if response %}
+    <p>{{response}}</p>
+{% else %}
+    {% if question %}
+        <p>Some error ocurred, please check the question.</p>
+    {% endif %}
+{% endif %}
+
+
+
+

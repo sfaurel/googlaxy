@@ -1,0 +1,10 @@
+from galactic import GalacticInterpreter
+from galactic import Roman
+g = GalacticInterpreter()
+g.interpretateFile("input.txt")
+
+
+g.readValue("dsa")
+g.values
+g.readItem("glob glob Silver is 34 Credits")
+g.getPrice("how many Credits is glob prok Silver ?")
