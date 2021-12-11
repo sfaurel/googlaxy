@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'currency/table.css' %}">
+<p>Googlaxy - Manage Items</p>
+<table>
+        <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+        </tr>
+        {% for i in itemsData %}
+                <tr>
+                        <td>{{i.name}}</td>
+                        <td>{{i.price}}</td>
+                        <td></td>
+                </tr>
+        {% endfor %}
+        <tr>
+                <form  method="POST">
+                        {% csrf_token %}
+                        <td>{{ form.name }}</td><td>{{ form.price }}</td>
+                        <td><button type="submit">Add</button></td>
+                </form>
+        </tr>
+</table>

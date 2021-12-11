@@ -1,5 +1,4 @@
 
-
 <p>Googlaxy</p>
 <form  method="POST">
     {% csrf_token %}
@@ -14,6 +13,6 @@
     {% endif %}
 {% endif %}
 
-
+<li><a href="{% url 'settings' %}">Settings</a></li>
 
 
